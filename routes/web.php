@@ -17,12 +17,7 @@ Route::get('/', function () {
 
 Route::get('test/', function () {
 
-    $buyer = \App\Buyer::where('id', 1)->get()->first();
+    $category = \App\Category::all()->first()->products;
 
-    $transaction =$buyer->transactions;
-
-    echo '<pre>';
-    print_r(count($transaction));
-    echo '</pre>';
 });
 
