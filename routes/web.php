@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('test/', function () {
+
+    $category = \App\Category::all()->first()->products;
+
+});
+
